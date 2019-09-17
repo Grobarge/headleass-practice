@@ -3,10 +3,10 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Link } from 'react-router-dom';
 
-const Years = () => (
+const Toasters = () => (
     <Query query={gql`
         {
-            years {
+            toasters {
             edges {
             node {
                 title
@@ -28,10 +28,12 @@ const Years = () => (
                     return(
                         <div>
                             {
-                                data.years.edges.map((year, key) => {
+                                data.toasters.edges.map((toaster, key) => {
                                     return(
                                         <div key={key}>
-                                            <h2>{year.node.title}</h2>
+                                            <h2>{toaster.node.title}</h2>
+                                            <Link to={`/toaster/${toaster.node.slug}`}
+                                            >Click on me</Link>
                                         </div>
                                     )
                                 })
@@ -44,4 +46,4 @@ const Years = () => (
     </Query>
 )
 
-export default Years;
+export default Toasters;

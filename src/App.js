@@ -1,9 +1,10 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Years from './Years/Years';
-import Year from './Years/Year';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Toasters from "./Toasters/Toasters";
+import Toaster from './Toasters/Toaster';
+
 
 
 const client = new ApolloClient({
@@ -14,22 +15,24 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
+      <Router>
+        <Switch>
       
         <div>
           <header>
-            <h1>Gajes Favorite Dead Shows by Year</h1>
+            <h1>Toaster Review Site</h1>
           </header>
-          <div className="conent">
-            <Route exactpath="/" component={Years} />
-            <Route path="/years" component={Years} />
-            <Route path="/year/:slug" component={Year} />
-
+          <div className="content">
+            
+            <Route exact path="/" component={Toasters} />
+            <Route path="/toasters" exact component={Toasters} />
+            <Route path="/toaster/:slug" exact component={Toaster} />
+            
           </div>
         </div>
 
-
-      </BrowserRouter>
+        </Switch>
+      </Router>
     </ApolloProvider>
   );
 }
