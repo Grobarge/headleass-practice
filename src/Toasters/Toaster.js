@@ -20,6 +20,8 @@ class Toaster extends Component {
                 <strong>{props.data.toaster.toasterMeta.price}</strong>
                 <br />
                 <strong>{props.data.toaster.toasterMeta.watts}</strong>
+                <br />
+                
             </div>
         );
 
@@ -40,9 +42,10 @@ query getToasterBySlug($slug: String) {
       toasterMeta {
         price
         watts
+        
+        }
       }
     }
-  }
 `;
 
 export default graphql(GetToasterBySlug, {
