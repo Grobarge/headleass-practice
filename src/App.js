@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Toasters from "./Toasters/Toasters";
 import Toaster from './Toasters/Toaster';
 import HomePage from './Gaje/HomePage';
+import Home from './Homepage/Home';
 
 
 
@@ -22,17 +23,16 @@ function App() {
       
         <div>
           <header>
-            <h1>Toaster Review Site</h1>
-            <Link classname="gajes-link" to={'/gajespage'}>Gajes Page</Link>
+            <h1>Welcome to Gajes test site</h1>
           </header>
-          <div className="content">
+          {/* <div className="content"> */}
             
-            <Route exact path="/" component={Toasters} />
+            <Route exact path="/" component={Home} />
             <Route path="/toasters"  component={Toasters} />
             <Route path="/toaster/:slug" component={Toaster} />
             <Route path="/gajespage" component={HomePage} />
             
-          </div>
+          {/* </div> */}
         </div>
 
         </Switch>
