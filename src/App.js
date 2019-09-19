@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost'; //  Package containing everything we need to set up Apollo Client
+import { ApolloProvider } from 'react-apollo'; //  Apollo Client view layer integration for React
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Toasters from "./Toasters/Toasters";
 import Toaster from './Toasters/Toaster';
@@ -9,7 +9,9 @@ import HomePage from './Gaje/HomePage';
 import Home from './Homepage/Home';
 
 
-
+// You can see that we’re creating a new client using Apollo and providing it with the URL endpoint to use for GraphQL requests. 
+//We’re also wrapping our entire app in a new ApolloProvider and passing to it the client we created as the client prop. 
+//The result of this is that we’ll now be able to use the react-apollo library to make GraphQL requests anywhere inside of our app.
 const client = new ApolloClient({
   uri: 'https://gaje.paulmitchell.edu/graphql',
 })

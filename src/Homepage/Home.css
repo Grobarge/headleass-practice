@@ -8,6 +8,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     height: 100vh;
+    
 }
 
 .card {
@@ -67,3 +68,7 @@
     }
   }
   
+ /* Gets rid of blue underlining on Link tags */
+  a {
+    text-decoration: none;
+  }

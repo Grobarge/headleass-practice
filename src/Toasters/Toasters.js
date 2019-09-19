@@ -3,6 +3,8 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Link } from 'react-router-dom';
 
+import './Toasters.css';
+
 const Toasters = () => (
     <Query query={gql`
         {
@@ -26,7 +28,7 @@ const Toasters = () => (
                 }
                     
                     return(
-                        <div>
+                        <div className="Toasters">
                             {
                                 data.toasters.edges.map((toaster, key) => {
                                     return(

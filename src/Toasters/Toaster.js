@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './Toaster.css';
+
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
@@ -15,13 +17,14 @@ class Toaster extends Component {
         }
 
         return(
-            <div>
+            <div className="Toaster">
+                <div className="Toaster_content">
                 <h2>{props.data.toaster.title}</h2>
                 <strong>{props.data.toaster.toasterMeta.price}</strong>
                 <br />
                 <strong>{props.data.toaster.toasterMeta.watts}</strong>
                 <br />
-                
+                </div>
             </div>
         );
 
