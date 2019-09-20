@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
             <div className="Home-container">
-
+                <Link to="/GajesPicks">
                 <div className="card 1">
                     <div className="card_image"> <img src="https://media.giphy.com/media/l3zoJcPxBD4qYFrws/source.gif" /> </div>
                     <div className="card_title title-white">
@@ -18,6 +18,8 @@ class Home extends Component {
                         Grateful Dead shows</p>
                     </div>
                 </div>
+                </Link>
+
 
                 <Link to="/Toasters">
                 <div className="card 2">
@@ -33,6 +35,7 @@ class Home extends Component {
                 </div>
                 </Link>
 
+                <Link to="">
                 <div className="card 3">
                     <div className="card_image">
                         <img src="https://media.giphy.com/media/3oEjHRCl5C4dwURY40/giphy.gif" />
@@ -44,7 +47,7 @@ class Home extends Component {
                         <p>Click on this to see all of the concerts I have been to</p>
                     </div>
                 </div>
-
+                </Link>
             </div>
         )
     }

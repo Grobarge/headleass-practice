@@ -5,8 +5,8 @@ import { ApolloProvider } from 'react-apollo'; //  Apollo Client view layer inte
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Toasters from "./Toasters/Toasters";
 import Toaster from './Toasters/Toaster';
-import HomePage from './Gaje/HomePage';
 import Home from './Homepage/Home';
+import GajesPicks from './Gajes Picks/GajesPicks';
 
 
 // You can see that we’re creating a new client using Apollo and providing it with the URL endpoint to use for GraphQL requests. 
@@ -23,7 +23,7 @@ function App() {
       <Router>
         <Switch>
       
-        <div>
+        <div> 
           <header>
             <h1>Welcome to Gajes test site</h1>
           </header>
@@ -32,8 +32,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/toasters"  component={Toasters} />
             <Route path="/toaster/:slug" component={Toaster} />
-            <Route path="/gajespage" component={HomePage} />
-            
+            <Route path="/GajesPicks" component={GajesPicks} />
           {/* </div> */}
         </div>
 
